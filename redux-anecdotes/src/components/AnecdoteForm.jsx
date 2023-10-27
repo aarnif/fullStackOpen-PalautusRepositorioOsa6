@@ -13,7 +13,7 @@ const AnecdoteForm = () => {
   };
 
   return (
-    <>
+    <div style={{ marginBottom: "20px" }}>
       <h2>create new</h2>
       <form onSubmit={anecdote}>
         <div>
@@ -21,7 +21,7 @@ const AnecdoteForm = () => {
         </div>
         <button type="submit">create</button>
       </form>
-    </>
+    </div>
   );
 };
 
