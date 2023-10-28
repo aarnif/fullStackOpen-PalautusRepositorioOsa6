@@ -1,5 +1,5 @@
 import { useDispatch } from "react-redux";
-import { addAnecdote } from "../reducers/anecdoteReducer";
+import { addAnecdote } from "../reducers/anecdoteReducer.js";
 
 const AnecdoteForm = () => {
   const dispatch = useDispatch();
@@ -7,6 +7,7 @@ const AnecdoteForm = () => {
   const anecdote = (event) => {
     const newAnecdote = event.target.anecdote.value;
     event.preventDefault();
+    console.log("Add anecdote:", newAnecdote);
     dispatch(addAnecdote(newAnecdote));
     console.log("New anecdote submitted!");
     event.target.anecdote.value = "";
