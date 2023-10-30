@@ -12,6 +12,9 @@ const AnecdoteForm = () => {
     onSuccess: () => {
       queryClient.invalidateQueries({ queryKey: ["anecdotes"] });
     },
+    onError: () => {
+      setNotification("too short anecdote, must have length 5 or more");
+    },
   });
 
   const getId = () => (10000 * Math.random()).toFixed(0);
